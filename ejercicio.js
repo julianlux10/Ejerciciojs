@@ -10,7 +10,7 @@ function calcularPromedio(event) {
         return false;
     }
     if (v1 > 50 || v1 < 10 || v2 > 50 || v2 < 10 || v3 > 50 || v3 < 10 || vExamenParcial > 50 || vExamenParcial < 10 || vTrabajoFinal > 50 || vTrabajoFinal < 10) {
-        document.getElementById("mensajeError").innerHTML = "El rango de ingreso de notas NO debe ser mayor a 50 ni menos a 10";
+        document.getElementById("mensajeError").innerHTML = "El rango de ingreso de notas NO debe ser mayor a 50 ni menor a 10";
         return false;
     } else {
         var promedioParciales = (parseFloat(v1) + parseFloat(v2) + parseFloat(v3)) / 3;
@@ -24,7 +24,7 @@ function calcularPromedio(event) {
     if (promedioFinal >= 10 && promedioFinal <=32) {
         document.getElementById("aprox").innerHTML = "Usted ha reprobado"
     }
-    else {
+    if (promedioFinal >= 33 && promedioFinal <=50){
         document.getElementById("aprox").innerHTML = "Usted ha aprobado"
     }
     return false;
